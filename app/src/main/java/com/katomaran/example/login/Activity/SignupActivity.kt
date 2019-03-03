@@ -1,4 +1,4 @@
-package com.katomaran.example.login
+package com.katomaran.example.login.Activity
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.katomaran.example.login.R
 
 /**
  * Created by gopalsamy.k on 20/3/17.

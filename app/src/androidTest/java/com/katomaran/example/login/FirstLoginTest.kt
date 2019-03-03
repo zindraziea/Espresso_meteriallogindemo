@@ -1,6 +1,5 @@
 package com.katomaran.example.login
 
-import android.support.test.espresso.action.ViewActions
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -12,7 +11,7 @@ import org.hamcrest.Matchers.*
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.util.EnumSet.allOf
+import com.katomaran.example.login.Activity.MainActivity
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
@@ -29,11 +28,13 @@ class FirstLoginTest {
         val txtemail = onView(allOf(withId(R.id.emailEdittxt),isDisplayed()))
         val txtpass = onView(allOf(withId(R.id.passEdittxt), isDisplayed()))
         val btnLogin = onView(allOf(withId(R.id.login), isDisplayed()))
-        btnAction.perform(click());
-        Thread.sleep(2000)
+        btnAction.perform(click())
+        isVisible(txtemail)
+        viewExists(allOf(withId(R.id.emailEdittxt),isDisplayed()),1000)
         txtemail.perform(replaceText("test@test.com"), closeSoftKeyboard())
         txtpass.perform(replaceText("123456"), closeSoftKeyboard())
-        Thread.sleep(2000)
         btnLogin.perform(click())
     }
+
 }
+

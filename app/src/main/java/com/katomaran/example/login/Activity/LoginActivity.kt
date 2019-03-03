@@ -1,4 +1,4 @@
-package com.katomaran.example.login
+package com.katomaran.example.login.Activity
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -24,6 +24,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.katomaran.example.login.R
 
 
 /**

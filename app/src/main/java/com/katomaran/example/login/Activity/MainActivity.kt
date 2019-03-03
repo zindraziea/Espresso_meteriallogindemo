@@ -1,4 +1,4 @@
-package com.katomaran.example.login
+package com.katomaran.example.login.Activity
 
 import android.content.Context
 import android.content.Intent
@@ -13,6 +13,7 @@ import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View
+import com.katomaran.example.login.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -74,6 +75,4 @@ class MainActivity : AppCompatActivity() {
         val MyPREFERENCES = "MyPrefs"
         val loginUser = "loginUserKey"
     }
-
-
 }

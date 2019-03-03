@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
-            android:name="com.katomaran.example.login.MainActivity"
+            android:name="com.katomaran.example.login.Activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +18,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.katomaran.example.login.LoginActivity"
+            android:name="com.katomaran.example.login.Activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Translucent"/>
         <activity
-            android:name="com.katomaran.example.login.SignupActivity"
+            android:name="com.katomaran.example.login.Activity.SignupActivity"
             android:theme="@style/Theme.AppCompat.Translucent"/>
     </application>
 
