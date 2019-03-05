@@ -25,15 +25,16 @@ class FirstLoginTest {
     fun firstTest() {
 
         val btnAction = onView(allOf(withId(R.id.fab),isDisplayed()))
-        val txtemail = onView(allOf(withId(R.id.emailEdittxt),isDisplayed()))
-        val txtpass = onView(allOf(withId(R.id.passEdittxt), isDisplayed()))
+        val txtEmail = onView(allOf(withId(R.id.emailEdittxt),isDisplayed()))
+        val txtPass = onView(allOf(withId(R.id.passEdittxt), isDisplayed()))
         val btnLogin = onView(allOf(withId(R.id.login), isDisplayed()))
         btnAction.perform(click())
-        isVisible(txtemail)
+        isVisible(txtEmail)
         viewExists(allOf(withId(R.id.emailEdittxt),isDisplayed()),1000)
-        txtemail.perform(replaceText("test@test.com"), closeSoftKeyboard())
-        txtpass.perform(replaceText("123456"), closeSoftKeyboard())
+        txtEmail.perform(replaceText("test@test.com"), closeSoftKeyboard())
+        txtPass.perform(replaceText("123456"), closeSoftKeyboard())
         btnLogin.perform(click())
+        viewExists(allOf(withText("Please Sign up"),isDisplayed()),3000)
     }
 
 }
