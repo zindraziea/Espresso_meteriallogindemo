@@ -40,7 +40,7 @@ fun isVisible(interaction: ViewInteraction, millis: Long=5000): Boolean? {
 }
 
 @Throws(InterruptedException::class)
-fun viewExists(viewMatcher: Matcher<View>, millis: Long=5000): Boolean? {
+fun isVisible(viewMatcher: Matcher<View>, millis: Long=5000): Boolean? {
     val found = arrayOfNulls<Boolean>(1)
 
     val latch = CountDownLatch(1)

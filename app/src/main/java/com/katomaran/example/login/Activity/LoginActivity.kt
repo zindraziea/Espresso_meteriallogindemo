@@ -24,6 +24,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.katomaran.example.login.Activity.util.EspressoIdlingResource
 import com.katomaran.example.login.R
 
 
@@ -54,6 +55,10 @@ class LoginActivity : AppCompatActivity() {
             setupEnterAnimation()
             setupExitAnimation()
         }
+        if (!EspressoIdlingResource.idlingResource.isIdleNow()) {
+            EspressoIdlingResource.decrement(); // Set app as idle.
+        }
+
         signup!!.setOnClickListener {
             val io = Intent(this@LoginActivity, SignupActivity::class.java)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -141,7 +146,6 @@ class LoginActivity : AppCompatActivity() {
             }
         })
         anim.start()
-
     }
 
     private fun backPressed() {

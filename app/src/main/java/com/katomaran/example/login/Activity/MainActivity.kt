@@ -13,7 +13,9 @@ import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View
+import com.katomaran.example.login.Activity.util.EspressoIdlingResource
 import com.katomaran.example.login.R
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab!!.setOnClickListener {
+            EspressoIdlingResource.increment()
             val io = Intent(this@MainActivity, LoginActivity::class.java)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 val pair1 = Pair.create(fab!!.findViewWithTag<View>("login"), fab!!.transitionName)
